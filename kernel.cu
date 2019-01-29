@@ -42,5 +42,6 @@ __global__ void reduction(float *out, float *in, unsigned size)
     } 
     __syncthreads();
     }
+    //if(threadIdx.x==0)
     out[blockIdx.x]=partialsum[0];
 }
